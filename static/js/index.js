@@ -83,7 +83,7 @@ function categoryDisplay() {
     /*show category when click categories list*/
     $('.categories-list-item').click(function() {
         var cate = $(this).attr('cate'); //get category's name
-        $('#post-cate').replaceWith(cate);
+        $('#post-cate').html(cate);
         console.log("------"+cate);
         $('.post-list-body>div[post-cate!=' + cate + ']').hide(250);
         $('.post-list-body>div[post-cate=' + cate + ']').show(400);
