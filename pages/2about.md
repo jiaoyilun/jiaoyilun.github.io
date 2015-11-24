@@ -3,7 +3,7 @@ layout: page
 title: 关于我
 permalink: /about/
 icon: glyphicon-user
-published: false
+published: true
 ---
 
 
