@@ -2,6 +2,7 @@
 title: 一直很安静
 description: 一转身，一经年，一辈子
 email: jiaoyilun@163.com
+dateStyle: "%b %-d, %Y"
 
 # > # this means to ignore newlines until "baseurl:"
 #   Write an awesome description for your new site here. You can edit this
