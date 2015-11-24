@@ -15,13 +15,14 @@ layout: default
         
         <div class="all-posts" post-cate="All">
           {% for post in paginator.posts %}
-            <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
-              <h2>
-              {{ post.title }}
-              </h2>
-              <span class="">{{ post.date | date: site.dateStyle }}</span>
-            </a>
-
+            {% if post.published != false %}
+              <a class="post-list-item" href="{{ post.url | prepend: site.baseurl }}">
+                <h2>
+                {{ post.title }}
+                </h2>
+                <span class="">{{ post.date | date: site.dateStyle }}</span>
+              </a>
+            {% endif %}
 
 
           {% endfor %}
