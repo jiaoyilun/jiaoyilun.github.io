@@ -10,7 +10,7 @@ icon: glyphicon-user
 
 * email：[jiaoyilun@163.com](mailto:{{ site.email }})
 * QQ：524888737
-* Weibo：[Haoyang](http://weibo.com/jiaoyilun)
+* Weibo：[善尚VS若水](http://weibo.com/jiaoyilun)
 
 
 ---
