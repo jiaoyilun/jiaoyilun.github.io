@@ -4,8 +4,6 @@ description: 一转身，一经年，一辈子
 email: jiaoyilun@163.com
 #dateStyle: "%b %-d, %Y"
 dateStyle: "%F %R"
-staticServer : http://7xol15.com1.z0.glb.clouddn.com/
-staticStyle : "-thumbnail"
 picServer : http://7xol15.com1.z0.glb.clouddn.com/pic-thumbnail
 
 # > # this means to ignore newlines until "baseurl:"
