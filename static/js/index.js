@@ -1,3 +1,8 @@
+ $.fn.tagcloud.defaults = {
+        //size: {start: 1, end: 1, unit: 'em'},
+        color: {start: '#bbbbee', end: '#0085a1'},
+    };
+
 /**
  * 页面ready方法
  */
@@ -6,6 +11,8 @@ $(document).ready(function() {
     categoryDisplay();
     generateContent();
     backToTop();
+
+    $('#tag_cloud a').tagcloud();
 });
 
 /**
@@ -15,6 +22,7 @@ $(document).ready(function() {
 /*$(window).load(function() {
     fixFooterInit();
 });*/
+
 
 
 /**
