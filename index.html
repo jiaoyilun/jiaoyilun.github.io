@@ -96,7 +96,7 @@ layout: default
         标签云
       </div>
      ---------
-      {% for post in site.tags['whatever'] %}{{post}},{% endfor %}
+      {% for post in site.tags%}{{post}},{{post | first}}{% endfor %}
     </div>
   </div>
   <script language="javascript">
