@@ -17,6 +17,7 @@ $(function() {
                     };
                 }).get();
                
+               consolr.log(typeof(posts));
                for (var pt in posts) {
                	console.log(pt);
                	$("#results").append(pt.title+"<br>");
