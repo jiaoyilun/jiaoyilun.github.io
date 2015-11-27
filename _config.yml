@@ -3,6 +3,7 @@ title: 一直很安静
 subtitle: 一转身，一经年，一辈子
 keyword: jiaoyilun,焦一伦,上善若水,一直很安静,一转身，一经年，一辈子,魅族,MX4,CM12,CyanogenMod
 description: 上善若水的小站
+name : 上善若水
 email: jiaoyilun@163.com
 
 searchable: false
@@ -27,12 +28,8 @@ highlighter: pygments
 # highlighter: rouge
 # highlighter: false
 
-sitemap:
-    file: "/sitemap.xml"
-    exclude:
-        - "/feed.xml"
-    include_posts:
-        - "/index.html"
-    change_frequency_name: "change_frequency"
-    priority_name: "priority"
+
+JB :
+  BASE_PATH : false
+  atom_path : /atom.xml
 
