@@ -17,11 +17,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       {% if site.searchable %}
-      <script type="text/javascript" src="{{"/static/js/jquery-tapir.min.js" | prepend:site.baseurl}}"></script>
+      
       <form class="navbar-form navbar-right" role="search" id="searchForm" action="search.html">
         <div class="input-group">
           <input type="text" name="query" class="form-control" placeholder="搜一下吧" aria-describedby="basic-addon2">
-          <span class="input-group-addon" id="basic-addon2" style="cursor:pointer" onclick="$('#searchForm').submit();">Go</span>
+          <span class="input-group-addon" id="basic-addon2" style="cursor:pointer" onclick="$('#searchForm').submit;">Go</span>
         </div>
       </form>
       {% endif %}

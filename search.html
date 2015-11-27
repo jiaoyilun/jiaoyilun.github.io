@@ -1,13 +1,14 @@
 ---
 layout: default
 ---
+<script type="text/javascript" src="{{"/static/js/jquery.autocomplete.min.js" | prepend:site.baseurl}}"></script>
 <script type="text/javascript">
 $(function() {
+	
         $.ajax({
             url: "atom.xml",
             dataType: "xml",
             success: function( xmlResponse ) {
-            	console.log(xmlResponse);
                 var data = $( "post", xmlResponse ).map(function() {
                     return {
                         title: $( "title", this ).text() + ", " +
@@ -16,14 +17,23 @@ $(function() {
                         url: $("url", this).text()
                     };
                 }).get();
-                console.log(data);
-               
+               $( "#key" ).autocomplete({
+                    source: data,
+                    minLength: 0,
+                    select: function( event, ui ) {
+                        window.location.href = ui.url;
+                    }
+                });
+	);
             }
         });
+
     });
 
 </script>
 <div class="post_cont"> 
+<input type="text" id="key">
+
   <h1>搜索结果</h1> 
 
   <div id="search_results"> 
