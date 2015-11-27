@@ -90,8 +90,13 @@ layout: default
   </div>
   
   {% if site.cloudtag %}
+
+
+  <script type="text/javascript" src="{{ "/static/js/jquery.tagcloud.js" | prepend:site.baseurl }}"></script> 
+  <link rel="stylesheet" type="text/css" href="{{ "/static/css/cloudtag.css" | prepend: site.baseurl }}">
+
   <div class="col-sm-3">
-    <div class="shadow-corner-curl hidden-xs" id="tag_cloud">
+    <div class="shadow-corner-curl hidden-xs tags" id="tag_cloud">
       <div class="categories-list-header">
         标签云
       </div>
