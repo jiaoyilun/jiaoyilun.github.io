@@ -89,33 +89,6 @@ layout: default
     </div>
   </div>
   
-  {% if site.cloudtag %}
-
-
-  <script type="text/javascript" src="{{ "/static/js/jquery.tagcloud.js" | prepend:site.baseurl }}"></script> 
-  <link rel="stylesheet" type="text/css" href="{{ "/static/css/cloudtag.css" | prepend: site.baseurl }}">
-
-  <div class="col-sm-3">
-    <div class="shadow-corner-curl hidden-xs tags" id="tag_cloud">
-      <div class="categories-list-header">
-        标签云
-      </div>
-      {% for tag in site.tags%}
-        <a href="{{tag | first | prepend: '#'}}">{{tag | first}}</a>
-      {% endfor %}
-    </div>
-  </div>
-  <script language="javascript">
-    $.fn.tagcloud.defaults = {
-        //size: {start: 1, end: 1, unit: 'em'},
-        color: {start: '#bbbbee', end: '#0085a1'},
-    };
-    $(function () {
-        $('#tag_cloud a').tagcloud();
-    });
-  </script>
-
-  {% endif %}
 
 </div>
 
