@@ -78,6 +78,7 @@ layout: default
      
     </div>
   </div>
+
   <div class="col-sm-3">
     <div class="shadow-corner-curl hidden-xs">
       <div class="categories-list-header">
@@ -94,5 +95,23 @@ layout: default
       {% endfor %}
     </div>
   </div>
+  
+  {% if site.cloudtag %}
+   ----------------
+  <div class="col-sm-3">
+    <div class="shadow-corner-curl hidden-xs">
+      <div class="categories-list-header">
+        标签
+      </div>
+      
+      {% for tag in site.tags %}
+        <a href="javascript:;" class="categories-list-item" cate="{{ tag }}">
+          {{ tag }} 
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
 </div>
 

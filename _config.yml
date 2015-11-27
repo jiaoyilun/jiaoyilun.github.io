@@ -6,6 +6,8 @@ description: 上善若水的小站
 email: jiaoyilun@163.com
 
 searchable: false
+cloudtag : true
+
 dateStyle: "%F %R"
 picServer : 'http://7xol15.com1.z0.glb.clouddn.com/pic-thumbnail'
 
