@@ -96,8 +96,10 @@ layout: default
         标签云
       </div>
      
-      {% for tag in site.tags %}
-        {{tag}}
+      {% for tg in site.tags %}
+        <script language="javascript">
+        console.log({{tg}});
+        </script>
       {% endfor %}
     </div>
   </div>
