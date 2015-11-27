@@ -23,13 +23,10 @@ layout: default
                 <span class="">{{ post.date | date: site.dateStyle }}</span>
               </a>
             {% endif %}
-
-
           {% endfor %}
-          <!-- 分页 -->
+          
       <div class="paginator">
               {% if paginator.total_pages > 1 %}
-              <!-- 分页代码 -->
               {% if paginator.previous_page %}
             <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">上一页</a>
         {% endif %}
@@ -49,11 +46,8 @@ layout: default
         {% endif %}
               {% endif %}
       </div>
-      
-
-
         </div>
-        <!-- <div class="posts-in-categories"> -->
+
         {% for category in site.categories %}
           <div post-cate="{{category | first}}">
             {% for posts in category  %}
@@ -70,8 +64,7 @@ layout: default
             {% endfor %}
           </div>
         {% endfor %}
-        
-        <!-- </div> -->
+  
       </div>
       
 
@@ -102,21 +95,13 @@ layout: default
       <div class="categories-list-header">
         标签云
       </div>
-      ----------------{{site.tags | size}}-----------------
+     
       {% for tag in site.tags %}
         111111
       {% endfor %}
     </div>
   </div>
-  <script language="javascript">
-    $.fn.tagcloud.defaults = {
-        //size: {start: 1, end: 1, unit: 'em'},
-        color: {start: '#bbbbee', end: '#0085a1'},
-    };
-    $(function () {
-        $('#tag_cloud a').tagcloud();
-    });
-  </script>
+  
 
   {% endif %}
 
