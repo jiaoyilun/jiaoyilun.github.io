@@ -95,8 +95,8 @@ layout: default
       <div class="categories-list-header">
         标签云
       </div>
-     
-      {% for tag in site.tags['whatever'] %}{{tag}},{% endfor %}
+     ---------
+      {% for post in site.tags['whatever'] %}{{post}},{% endfor %}
     </div>
   </div>
   <script language="javascript">
