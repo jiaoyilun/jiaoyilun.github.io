@@ -96,7 +96,29 @@ layout: default
     </div>
   </div>
   
-  
+  {% if site.cloudtag %}
+  <div class="col-sm-3">
+    <div class="shadow-corner-curl hidden-xs" id="tag_cloud">
+      <div class="categories-list-header">
+        标签云
+      </div>
+      ----------------{{site.tags | size}}-----------------
+      {% for tag in site.tags %}
+        111111
+      {% endfor %}
+    </div>
+  </div>
+  <script language="javascript">
+    $.fn.tagcloud.defaults = {
+        //size: {start: 1, end: 1, unit: 'em'},
+        color: {start: '#bbbbee', end: '#0085a1'},
+    };
+    $(function () {
+        $('#tag_cloud a').tagcloud();
+    });
+  </script>
+
+  {% endif %}
 
 </div>
 
