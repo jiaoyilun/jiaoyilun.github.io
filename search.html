@@ -1,14 +1,41 @@
 ---
 layout: default
 ---
+<script type="text/javascript">
+$(function() {
+        $.ajax({
+            url: "atom.xml",
+            dataType: "xml",
+            success: function( xmlResponse ) {
+            	console.log(xmlResponse);
+                var data = $( "article", xmlResponse ).map(function() {
+                    return {
+                        value: $( "title", this ).text() + ", " +
+                            ( $.trim( $( "date", this ).text() ) ),
+                        desc: $("description", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
 
+                $( "#J_search" ).autocomplete({
+                    source: data,
+                    minLength: 0,
+                    select: function( event, ui ) {
+                        window.location.href = ui.item.url;
+                    }
+                });
+            }
+        });
+    });
+
+</script>
 <div class="post_cont"> 
   <h1>搜索结果</h1> 
 
   <div id="search_results"> 
   </div>
   <script>
-    $('#search_results').tapir({'token': '5658882c3093adf1ee000000'});
+    
   </script>
 
 </div>
