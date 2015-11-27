@@ -6,7 +6,7 @@ description: 上善若水的小站
 name : 上善若水
 email: jiaoyilun@163.com
 
-searchable: false
+searchable: true
 cloudtag : true
 
 dateStyle: "%F %R"
