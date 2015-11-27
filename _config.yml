@@ -1,19 +1,14 @@
 # Site settings
 title: 一直很安静
-description: 一转身，一经年，一辈子
+subtitle: 一转身，一经年，一辈子
+keyword: 焦一伦 上善若水 一直很安静 一转身，一经年，一辈子 魅族 MX4 CM12 CyanogenMod
+description: 上善若水的小站
 email: jiaoyilun@163.com
-#dateStyle: "%b %-d, %Y"
+
+searchable: false
 dateStyle: "%F %R"
 picServer : 'http://7xol15.com1.z0.glb.clouddn.com/pic-thumbnail'
 
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
-
-# baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
 url: http://jiaoyilun.github.io
 github_username:  jiaoyilun
 permalink: /:year/:month/:day/:title/

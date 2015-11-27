@@ -12,18 +12,18 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <p class="navbar-text">{{ site.description }}</p>
+      <p class="navbar-text">{{ site.subtitle }}</p>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
+      {% if site.searchable %}
       <form class="navbar-form navbar-right" role="search">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="搜一下吧" aria-describedby="basic-addon2">
           <span class="input-group-addon" id="basic-addon2">Go</span>
         </div>
       </form>
-
+      {% endif %}
       <ul class="nav navbar-nav navbar-right">
 
         {% if page.url == "/index.html" %}
