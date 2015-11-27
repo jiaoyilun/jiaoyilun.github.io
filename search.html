@@ -8,7 +8,7 @@ $(function() {
             url: "atom.xml",
             dataType: "xml",
             success: function( xmlResponse ) {
-                var data = $( "post", xmlResponse ).map(function() {
+                var posts = $( "post", xmlResponse ).map(function() {
                     return {
                         title: $( "title", this ).text() + ", " +
                             ( $.trim( $( "updated", this ).text() ) ),
@@ -16,13 +16,11 @@ $(function() {
                         url: $("url", this).text()
                     };
                 }).get();
-               $( "#key" ).autocomplete({
-                    source: data,
-                    minLength: 0,
-                    select: function( event, ui ) {
-                        window.location.href = ui.url;
-                    }
-                });
+               
+               for (var pt in posts) {
+               	$("#results").append(pt.title+"<br>");
+               };
+
             }
         });
     });
@@ -33,7 +31,7 @@ $(function() {
 
   <h1>搜索结果</h1> 
 
-  <div id="search_results"> 
+  <div id="results"> 
   </div>
   <script>
     
