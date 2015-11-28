@@ -17,6 +17,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       {% if (site.searchable  && page.url != "/search.html")%}
+      {%page.url != "/search.html"%}
       <form class="navbar-form navbar-right" role="search" id="searchForm" action="search.html">
         <div class="input-group">
           <input type="text" name="query" class="form-control" placeholder="搜一下吧" aria-describedby="basic-addon2">
