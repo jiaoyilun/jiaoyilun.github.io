@@ -1,6 +1,13 @@
 ---
 layout: default
 ---
+<style type="text/css">
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
 <script type="text/javascript" src="{{"/static/js/jquery.autocomplete.min.js" | prepend:site.baseurl}}"></script>
 <script type="text/javascript">
 $(function() {	
@@ -49,11 +56,11 @@ function go(){
 }
 </script>
        
-<div class="col-lg-8">
+<div class="col-lg-8 center-block">
     <div class="input-group">
       <input type="text" id="key" class="form-control input-lg" placeholder="可搜索标题，正文">
       <span class="input-group-btn">
-        <button class="btn btn-success btn-lg" type="button" onclick="go()">搜!</button>
+        <button class="btn btn-success btn-lg" type="button" onclick="go()">测试!</button>
       </span>
     </div><!-- /input-group -->
   </div>
