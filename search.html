@@ -3,6 +3,14 @@ layout: default
 ---
 <script type="text/javascript" src="{{"/static/js/jquery.autocomplete.min.js" | prepend:site.baseurl}}"></script>
 <script type="text/javascript">
+$(function() {	
+        var key = getKeyWord();
+        if(key.length>0){
+        	$("#key").val(key);
+        	getData(key);
+        }
+});
+
 function getData(key){
 	$.ajax({
 	            url: "atom.xml",
@@ -33,32 +41,17 @@ function getKeyWord(){
       return decodeURI(paraStr);
 }
 
-$(function() {	
-        var key = getKeyWord();
-        if(key.length>0){
-        	$("#key").val(key);
-        	getData(key);
-        }
-});
+function go(){
+	var url = '{{site.utl}}/search.html?query='+$("#key").val();
+	window.location.href = url;
+}
 </script>
-<div class="post_cont"> 
        
-
 <div class="col-lg-8">
     <div class="input-group">
-      <input type="text" class="form-control input-lg" placeholder="可搜索标题，正文">
+      <input type="text" id="key" class="form-control input-lg" placeholder="可搜索标题，正文">
       <span class="input-group-btn">
-        <button class="btn btn-success btn-lg" type="button">搜!</button>
+        <button class="btn btn-success btn-lg" type="button" onclick="go()">搜!</button>
       </span>
     </div><!-- /input-group -->
   </div>
-
-  <h1>搜索结果</h1> 
-
-  <div id="results"> 
-  </div>
-  <script>
-    
-  </script>
-
-</div>
