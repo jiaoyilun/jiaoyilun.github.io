@@ -3,30 +3,46 @@ layout: default
 ---
 <script type="text/javascript" src="{{"/static/js/jquery.autocomplete.min.js" | prepend:site.baseurl}}"></script>
 <script type="text/javascript">
-$(function() {	
-        $.ajax({
-            url: "atom.xml",
-            dataType: "xml",
-            success: function( xmlResponse ) {
-                var posts = $( "post", xmlResponse ).map(function() {
-                    return {
-                        title: $( "title", this ).text() + ", " +
-                            ( $.trim( $( "updated", this ).text() ) ),
-                        desc: $("summary", this).text(),
-                        url: $("url", this).text()
-                    };
-                }).get();
-               
-               console.log(typeof(posts));
-               console.log(posts);
-	for (var i = posts.length - 1; i >= 0; i--) {
-		$("#results").append(posts[i].title+"<br>");
-	};
-       
-            }
-        });
-    });
+function getData(key){
+	$.ajax({
+	            url: "atom.xml",
+	            dataType: "xml",
+	            success: function( xmlResponse ) {
+	                var posts = $( "post", xmlResponse ).map(function() {
+	                    return {
+	                        title: $( "title", this ).text() + ", " +
+	                            ( $.trim( $( "updated", this ).text() ) ),
+	                        //desc: $("summary", this).text(),
+	                        content: $("content",this).text(),
+	                        url: $("url", this).text()
+	                    };
+	                }).get();             
+	            //  console.log(typeof(posts));
+	            //  console.log(posts);
+		for (var i = posts.length - 1; i >= 0; i--) {
+			if(posts[i].title.indexOf(key)>0 ||posts[i].content.indexOf(key)>0	){
+				$("#results").append(posts[i].title+"<br>");
+			}
+		};
+	            }
+	        });
+}
 
+function getKeyWord(){
+      var href = window.location.href;
+      var pos = href.indexOf('?query=');
+      var paraStr = href.substring(pos + 7);
+      return paraStr;
+}
+
+$(function() {	
+        var key = getKeyWord();
+        if(key.trim.length>0){
+        	console.log(key);
+        	getData(key);
+        }
+	
+});
 </script>
 <div class="post_cont"> 
 <input type="text" id="key">
