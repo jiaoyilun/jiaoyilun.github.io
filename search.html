@@ -17,10 +17,12 @@ function getData(key){
 	                        url: $("url", this).text()
 	                    };
 	                }).get();             
-	            //  console.log(typeof(posts));
-	            //  console.log(posts);
+	              console.log(typeof(posts));
+	              console.log(posts);
 		for (var i = posts.length - 1; i >= 0; i--) {
+			console.log("for()");
 			if(posts[i].title.indexOf(key)>0 ||posts[i].content.indexOf(key)>0	){
+				console.log('有了');
 				$("#results").append(posts[i].title+"<br>");
 			}
 		};
