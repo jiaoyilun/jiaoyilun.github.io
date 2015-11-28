@@ -136,6 +136,6 @@ function generateContent() {
 }
 
 function search(id){
-    var url = '{{site.utl}}/search.html?query='+$("#"+id).val();
+    var url = 'http://jiaoyilun.github.io/search.html?query='+$("#"+id).val();
     window.location.href = url;
 }
