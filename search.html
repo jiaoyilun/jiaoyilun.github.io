@@ -23,7 +23,7 @@ function getData(key){
 	                        desc: $("summary", this).text(),
 	                        time: ( $.trim( $( "updated", this ).text() ) ),
 	                        content: $("content",this).text(),
-	                        url: $("url", this).text()
+	                        url: $("link", this).text()
 	                    };
 	                }).get();             
 	              var ulstr = "";  
