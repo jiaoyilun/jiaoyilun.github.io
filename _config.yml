@@ -7,7 +7,7 @@ name : 上善若水
 email: jiaoyilun@163.com
 
 searchable: true
-cloudtag : true
+cloudtag : false
 
 dateStyle: "%F %R"
 picServer : 'http://7xol15.com1.z0.glb.clouddn.com/pic-thumbnail'
