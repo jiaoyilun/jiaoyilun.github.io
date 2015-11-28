@@ -16,7 +16,7 @@ layout: null
   {% for post in site.posts %}
   <post>
     <title>{{ post.title }}</title>
-    <url>{{ site.url }}{{ post.url }</url>
+    <url>{{ site.url }}{{ post.url }}</url>
     <updated>{{ post.date }}</updated>
     <id>{{ site.url }}{{ post.id }}</id>
     <content type="html">{{ post.content | xml_escape }}</content>
