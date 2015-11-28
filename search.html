@@ -4,10 +4,12 @@ layout: default
 <script type="text/javascript" src="{{"/static/js/jquery.autocomplete.min.js" | prepend:site.baseurl}}"></script>
 <script type="text/javascript">
 function getData(key){
+	console.log("getData");
 	$.ajax({
 	            url: "atom.xml",
 	            dataType: "xml",
 	            success: function( xmlResponse ) {
+	            		console.log("success");
 	                var posts = $( "post", xmlResponse ).map(function() {
 	                    return {
 	                        title: $( "title", this ).text() + ", " +
