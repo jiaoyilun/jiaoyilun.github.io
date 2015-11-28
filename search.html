@@ -25,9 +25,11 @@ function getData(key){
 	                        url: $("url", this).text()
 	                    };
 	                }).get();             
+	              var ulstr = "";  
 		for (var i = posts.length - 1; i >= 0; i--) {
 			if(posts[i].title.indexOf(key)>0 ||posts[i].content.indexOf(key)>0	){
-				$("#results").append(posts[i].title+"<br>");
+				ulstr = "<li>" + posts[i].title + "</li>";
+				$("#results").append(ulstr);
 			}
 		};
 	            }
@@ -55,3 +57,10 @@ function go(){
       </span>
     </div><!-- /input-group -->
   </div>
+<div id="results-container">
+	<ul id="results">
+		
+	</ul>
+
+
+</div>
