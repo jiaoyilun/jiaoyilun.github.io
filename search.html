@@ -1,13 +1,7 @@
 ---
 layout: default
 ---
-<style type="text/css">
-.center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
+
 <script type="text/javascript" src="{{"/static/js/jquery.autocomplete.min.js" | prepend:site.baseurl}}"></script>
 <script type="text/javascript">
 $(function() {	
@@ -25,9 +19,9 @@ function getData(key){
 	            success: function( xmlResponse ) {
 	                var posts = $( "post", xmlResponse ).map(function() {
 	                    return {
-	                        title: $( "title", this ).text() + ", " +
-	                            ( $.trim( $( "updated", this ).text() ) ),
-	                        //desc: $("summary", this).text(),
+	                        title: $( "title", this ).text() ,
+	                        desc: $("summary", this).text(),
+	                        time: ( $.trim( $( "updated", this ).text() ) ),
 	                        content: $("content",this).text(),
 	                        url: $("url", this).text()
 	                    };
@@ -35,7 +29,7 @@ function getData(key){
 	              var ulstr = "";  
 		for (var i = posts.length - 1; i >= 0; i--) {
 			if(posts[i].title.indexOf(key)>0 ||posts[i].content.indexOf(key)>0	){
-				ulstr = "<li>" + posts[i].title + "</li>";
+				ulstr = "<li><a href=\'“+ posts[i].url +”\'>" + posts[i].title + "</a></li>";
 				$("#results").append(ulstr);
 			}
 		};
@@ -56,7 +50,7 @@ function go(){
 }
 </script>
        
-<div class="col-lg-8 center-block">
+<div class="col-lg-8">
     <div class="input-group">
       <input type="text" id="key" class="form-control input-lg" placeholder="可搜索标题，正文">
       <span class="input-group-btn">
