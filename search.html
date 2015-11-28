@@ -32,7 +32,7 @@ function getKeyWord(){
       var href = window.location.href;
       var pos = href.indexOf('?query=');
       var paraStr = href.substring(pos + 7);
-      return paraStr;
+      return decodeURI(paraStr);
 }
 
 $(function() {	
