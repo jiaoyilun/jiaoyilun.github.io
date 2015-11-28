@@ -45,10 +45,7 @@ function getKeyWord(){
       return decodeURI(paraStr);
 }
 
-function go(){
-	var url = '{{site.utl}}/search.html?query='+$("#key").val();
-	window.location.href = url;
-}
+
 </script>
        
 <div class="post-area post">
@@ -56,7 +53,7 @@ function go(){
 	       <div class="input-group">
 		      <input type="text" id="key" class="form-control input-lg" placeholder="可搜索标题，正文">
 		      <span class="input-group-btn">
-		        <button class="btn btn-success btn-lg" type="button" onclick="go()">Go!</button>
+		        <button class="btn btn-success btn-lg" type="button" onclick="search('key')">Go!</button>
 		      </span>
 	       </div>
 	 <div style="clear:both;"></div>

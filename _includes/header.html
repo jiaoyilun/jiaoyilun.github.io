@@ -20,8 +20,8 @@
       {% if(page.url != "/search.html") %}
       <form class="navbar-form navbar-right" role="search" id="searchForm" action="search.html">
         <div class="input-group">
-          <input type="text" name="query" class="form-control" placeholder="搜一下吧" aria-describedby="basic-addon2">
-          <span class="input-group-addon" id="basic-addon2" style="cursor:pointer" onclick="$('#searchForm').submit;">Go</span>
+          <input type="text" id="query" class="form-control" placeholder="搜一下吧" aria-describedby="basic-addon2">
+          <span class="input-group-addon" id="basic-addon2" style="cursor:pointer" onclick="search('query')">Go</span>
         </div>
       </form>
        {% endif %}

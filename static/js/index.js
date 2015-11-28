@@ -134,3 +134,8 @@ function generateContent() {
         });*/
     }
 }
+
+function search(id){
+    var url = '{{site.utl}}/search.html?query='+$("#"+id).val();
+    window.location.href = url;
+}
